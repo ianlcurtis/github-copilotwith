@@ -10,7 +10,8 @@ Migration from one code base to another.
 
 Prompt example to start examining the process to convert a Java Camel app to SpringBoot:
 
-```"You are an expert in Springboot and Camel, please explain step by step how you would redesign and convert this from Camel to Springboot native?"
+```
+"You are an expert in Springboot and Camel, please explain step by step how you would redesign and convert this from Camel to Springboot native?"
 ```
 
 ### Process
