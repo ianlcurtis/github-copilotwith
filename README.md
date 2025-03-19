@@ -5,6 +5,22 @@ A library of use case archetypes and GHCP solutions.
 TBD
 
 # Brownfield
+## Documentation of current code
+
+Example prompt to document a route xml file in Java
+```
+Can you read this file and generate a mermaid diagram of API for our documentation?
+
+If you can include a synopsis of each route's use as well like this:
+
+api/route:
+
+Does this thing
+Special parameters
+Error handling
+Headers
+```
+
 ## Migration
 Migration from one code base to another.
 
