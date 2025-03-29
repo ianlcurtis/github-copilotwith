@@ -7,18 +7,20 @@ TBD
 # Brownfield
 ## Documentation of current code
 
+Example prompt to explain a migration approach
+```
+You are an expert in [technology e.g. Springboot and Camel], please explain step by step how you would redesign and convert this from [ Source implementation e.g. Camel] to [target implementation e.g. Springboot native]?
+```
+
 Example prompt to document a route xml file in Java
 ```
-Can you read this file and generate a mermaid diagram of API for our documentation?
-
-If you can include a synopsis of each route's use as well like this:
-
+Can you generate a mermaid diagram for this API project for our documentation? Additionally include a synopsis of each route formatted like this:
+ 
 api/route:
-
-Does this thing
-Special parameters
-Error handling
-Headers
+Purpose:
+Special parameters:
+Error handling:
+Headers:
 ```
 
 ## Migration
