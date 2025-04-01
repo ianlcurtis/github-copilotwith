@@ -54,6 +54,17 @@ Prompt to identify test coverage:
 Are there any additional tests I should include, or are all test angles covered?
 ```
 
+Prompt to create test data (small example test data required):
+```
+Can you create me 100 test data samples. The format should be as follows:
+
+USERID,NAME,FAVOURITE_COLOUR
+001,Jo,Orange
+002,Anth,Black
+003,John,Pink
+004,Ian, Green
+```
+
 ## Migration
 Migration from one code base to another.
 
