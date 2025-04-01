@@ -77,10 +77,6 @@ Prompt example to start examining the process to convert from one codebase to an
 ```
 You are an expert in [technology e.g. Springboot and Camel], please explain step by step how you would redesign and convert this from [ Source implementation e.g. Camel] to [target implementation e.g. Springboot native]?
 ```
-```
-You are an expert in [technology e.g. Springboot and Apache Camel], please explain step by step how you would redesign and convert the [file] to a [target implementation e.g. native Spring] implementation. Please ensure that you follow best practice and ensure that you generate any unit tests for the converted implementation.
-```
-
 
 ## Type
 The type of solution being migrated.
