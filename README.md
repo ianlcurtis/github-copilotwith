@@ -51,7 +51,7 @@ Can you help me write the test cases, first for the existing code. The tests sho
 
 Prompt to identify test coverage:
 ```
-Are there any additional tests I should include, or are all test angles covered?
+Are there any additional tests I should include, or are all test angles covered? Pay attention to edge cases and happy / unhappy paths.
 ```
 
 Prompt to mock dependencies:
