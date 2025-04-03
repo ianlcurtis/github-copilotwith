@@ -51,7 +51,7 @@ Can you help me write the test cases, first for the existing code. The tests sho
 
 Prompt to identify test coverage:
 ```
-Are there any additional tests I should include, or are all test angles covered? Pay attention to edge cases and happy / unhappy paths.
+Are there any additional tests I should include, or are all test angles covered? Consider that I am using the [test framework e.g. Mockito] test framework. Pay attention to edge cases and happy / unhappy paths. Provide a test coverage matrix.
 ```
 
 Variation on prompt to write test cases, can be run after the previous prompt which identifies missing angles. You should include existing test case code as context:
