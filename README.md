@@ -56,7 +56,7 @@ Are there any additional tests I should include, or are all test angles covered?
 
 Variation on prompt to write test cases, can be run after the previous prompt which identifies missing angles. You should include existing test case code as context:
 ```
-Can you write the test cases based on your advice. Use the [test framework e.g. Mockito] test framework, and try to match our existing test cases. You should comment your test cases thoroughly so that the objective is clearly understandable..
+Can you write the test cases based on your advice. Use the [test framework e.g. Mockito] test framework, and try to match our existing test cases. You should comment your test cases thoroughly so that the objective is clearly understandable.
 ```
 
 Prompt to mock dependencies:
