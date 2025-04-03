@@ -46,12 +46,17 @@ I want to test the project before and after a code conversion. What would be the
 
 Prompt to write test cases:
 ```
-Can you help me write the test cases, first for the existing code. The tests should compliment those that exist already, and create coverage for happy and unhappy path plus edge cases.
+Can you help me write the test cases, first for the existing code. The tests should compliment those that exist already, and create coverage for happy and unhappy path plus edge cases. Use the [test framework e.g. Mockito] test framework. You should comment your test cases thoroughly so that the objective is clearly understandable.
 ```
 
 Prompt to identify test coverage:
 ```
 Are there any additional tests I should include, or are all test angles covered? Pay attention to edge cases and happy / unhappy paths.
+```
+
+Variation on prompt to write test cases, can be run after the previous prompt which identifies missing angles. You should include existing test case code as context:
+```
+Can you write the test cases based on your advice. Use the [test framework e.g. Mockito] test framework, and try to match our existing test cases. You should comment your test cases thoroughly so that the objective is clearly understandable..
 ```
 
 Prompt to mock dependencies:
