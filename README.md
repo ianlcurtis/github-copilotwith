@@ -18,7 +18,8 @@ The steps where GHCP can help.
 
 Example prompt to give a high level description of what a project does.
 ```
-Can you explain what this project does? We are new starters and have never touched this code before.
+We are new starters and have never touched this code before.
+[Can you create a ReadMe file explaining] / [Can you explain] what this project does?
 Start with a high-level summary of the codebase, then break the project down into logical areas and provide a thorough explanation of each, and how they interact.
 The explanation should be written in a way that it can be understood by a person joining the team that is unfamiliar with the code.
 ```
