@@ -52,9 +52,13 @@ Prompt to write test cases:
 Can you help me write the test cases, first for the existing code. The tests should compliment those that exist already, and create coverage for happy and unhappy path plus edge cases. Use the [test framework e.g. Mockito] test framework. You should comment your test cases thoroughly so that the objective is clearly understandable.
 ```
 
-Prompt to identify test coverage:
+Prompts to identify test coverage:
 ```
 Are there any additional tests I should include, or are all test angles covered? Consider that I am using the [test framework e.g. Mockito] test framework. Pay attention to edge cases and happy / unhappy paths. Provide a test coverage matrix.
+```
+```
+Review the existing unit test coverage of the MODULE_NAME module consider existing tests with a view to adding additional tests in the future.
+Generate a new readme markdown file named after the module name that provides an overview of the module and the test scenarios that currently exist.
 ```
 
 Variation on prompt to write test cases, can be run after the previous prompt which identifies missing angles. You should include existing test case code as context:
