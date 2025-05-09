@@ -16,7 +16,7 @@ The steps where GHCP can help.
 
 ## Documentation of current code
 
-###Example prompt to give a high level description of what a project does.
+###Example prompt to give a high level description of what a project does:
 ```
 We are new starters and have never touched this code before.
 [Can you create a ReadMe file explaining] / [Can you explain] what this project does?
@@ -24,12 +24,12 @@ Start with a high-level summary of the codebase, then break the project down int
 The explanation should be written in a way that it can be understood by a person joining the team that is unfamiliar with the code.
 ```
 
-### Prompt to give a description of a specific file e.g. an API controller.
+### Prompt to give a description of a specific file e.g. an API controller:
 ```
 Explain the [file name], what is the input, its output and what is it dependent upon. Note that I do not know this codebase, do not make any assumptions about my knowledge.
 ```
 
-### Prompt to document a file e.g. route xml in Java
+### Prompt to document a file e.g. route xml in Java:
 ```
 Generate a mermaid diagram for this API project for our documentation? Additionally include a synopsis of each route formatted like this:
  
