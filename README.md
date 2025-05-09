@@ -62,7 +62,8 @@ You must include unit tests to enhance resilience, happy and unhappy paths and a
 Please do not include integration, performance or stress tests at this point. We will consider these at a later date.
 ```
 
-### Prompt to implement the plan created in the previous prompt. The generated plan should be selected with the cursor:
+### Prompt to implement the plan created in the previous prompt: 
+(The generated plan should be selected with the cursor)
 ```
 Using this #selection, detail a plan to enhance unit test coverage. I want to focus on enhancing the resilience and maintainability of this module. 
 When implementing the tests you must comment your tests cases thoroughly so that what is being tested is clearly understandable. If there is an existing test for what is being tested, please amend the existing test file, where the tests are new, create a new file and ensure it is named appropriately.
