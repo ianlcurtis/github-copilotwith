@@ -16,7 +16,7 @@ The steps where GHCP can help.
 
 ## Documentation of current code
 
-###Example prompt to give a high level description of what a project does:
+### Prompt to give a high level description of what a project does:
 ```
 We are new starters and have never touched this code before.
 [Can you create a ReadMe file explaining] / [Can you explain] what this project does?
@@ -48,6 +48,7 @@ I want to test the project before and after a code conversion. What would be the
 ```
 
 ### Prompts to assess existing unit test coverage:
+Github Copilot can create additional high value unit test coverage, which can drive code quality improvement - for example, by discovering unhandled edge cases. 
 ```
 Review the existing unit test coverage of the MODULE_NAME module consider existing tests with a view to adding additional tests in the future. Generate a new readme markdown file named after the module name that provides an overview of the module and the test scenarios that currently exist.
 ```
