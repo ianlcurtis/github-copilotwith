@@ -55,6 +55,13 @@ Review the existing unit test coverage of the MODULE_NAME module consider existi
 ```
 Are there any additional tests I should include, or are all test angles covered? Consider that I am using the [test framework e.g. Mockito] test framework. Pay attention to edge cases and happy / unhappy paths. Provide a test coverage matrix.
 ```
+```
+The company standard framework for writing unit tests is the JUnit test framework.
+Review the existing unit test coverage of the #folder:MODULE_NAME.
+Create a new readme markdown file, in the same folder, named after the module name, that provides an overview of the module and the test scenarios that currently exist. 
+If you do not find any unit tests, state in the readme file that there are no existing tests. 
+**Ensure a comprehensive overview of all tests within this module**
+```
 
 ### Prompt to create a plan to implement missing unit test coverage:
 ```
