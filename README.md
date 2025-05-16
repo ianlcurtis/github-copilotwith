@@ -50,10 +50,13 @@ I want to test the project before and after a code conversion. What would be the
 ### Prompts to assess existing unit test coverage:
 Github Copilot can create additional high value unit test coverage, which can drive code quality improvement - for example, by discovering unhandled edge cases. 
 ```
-Review the existing unit test coverage of the MODULE_NAME module consider existing tests with a view to adding additional tests in the future. Generate a new readme markdown file named after the module name that provides an overview of the module and the test scenarios that currently exist.
+Review the existing unit test coverage of the MODULE_NAME module consider existing tests with a view to adding additional tests in the future.
+Generate a new readme markdown file named after the module name that provides an overview of the module and the test scenarios that currently exist.
 ```
 ```
-Are there any additional tests I should include, or are all test angles covered? Consider that I am using the [test framework e.g. Mockito] test framework. Pay attention to edge cases and happy / unhappy paths. Provide a test coverage matrix.
+Are there any additional tests I should include, or are all test angles covered?
+Consider that I am using the [test framework e.g. Mockito] test framework.
+Pay attention to edge cases and happy / unhappy paths. Provide a test coverage matrix.
 ```
 ```
 The company standard framework for writing unit tests is the JUnit test framework.
@@ -80,16 +83,23 @@ Note all of the tests are in this #folder. Do not add tests to a new folder that
 
 Alternatively, prompts to write test cases:
 ```
-Can you help me write the test cases, first for the existing code. The tests should compliment those that exist already, and create coverage for happy and unhappy path plus edge cases. Use the [test framework e.g. Mockito] test framework. You should comment your test cases thoroughly so that the objective is clearly understandable.
+Can you help me write the test cases, first for the existing code.
+The tests should compliment those that exist already, and create coverage for happy and unhappy path plus edge cases.
+Use the [test framework e.g. Mockito] test framework.
+You should comment your test cases thoroughly so that the objective is clearly understandable.
 ```
-Variation on prompt to write test cases, can be run after the previous prompt which identifies missing angles. You should include existing test case code as context:
+Variation on prompt to write test cases, can be run after the previous prompt which identifies missing angles. 
+You should include existing test case code as context:
 ```
-Can you write the test cases based on your advice. Use the [test framework e.g. Mockito] test framework, and try to match our existing test cases. You should comment your test cases thoroughly so that the objective is clearly understandable.
+Can you write the test cases based on your advice.
+Use the [test framework e.g. Mockito] test framework, and try to match our existing test cases.
+You should comment your test cases thoroughly so that the objective is clearly understandable.
 ```
 
 ### Prompt to mock dependencies:
 ```
-Can you help me mock dependencies of this service. Ensure that any dependencies that are not within the workspace are mocked so that the code can be run in isolation.
+Can you help me mock dependencies of this service.
+Ensure that any dependencies that are not within the workspace are mocked so that the code can be run in isolation.
 ```
 
 ### Prompt to create test data (small example test data required):
