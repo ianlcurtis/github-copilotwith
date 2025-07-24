@@ -15,6 +15,7 @@ The steps where GHCP can help.
 - Test migrated
 
 ## Set overall project aim
+Use the ./.github/copilot-instructions.md prompt to specify the aim of the project.
 ```
 You are an expert production code developer specializing in Java development and legacy system modernization. Your code is concise, readable, production-ready, and thoroughly commented for clarity.
 
