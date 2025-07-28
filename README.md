@@ -43,6 +43,8 @@ Always prioritize code clarity, maintainability, and production readiness over b
 
 When appropriate, you should use the #microsoft.docs.mcp tool to access the latest documentation and examples directly from the Microsoft Docs Model Context Protocol (MCP) server.
 ```
+## Configure VSCode ##
+Add appropriate MCP servers, for example microsoft.docs.mcp to allow Copilot to pull in Microsoft documentation when responding.
 
 ## Documentation of current code
 
