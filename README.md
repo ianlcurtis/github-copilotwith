@@ -197,7 +197,7 @@ $DTONAME="module1_dto"
 Convert the file $FILEPATH from COBOL to C#. Use the DTO $DTONAME
 ```
 
-An more complicated example that brings together some of these ideas:
+A more complicated example that brings together some of these ideas:
 ```
 You should use the following variables:
 $Drawio="<SQL GENERATION.drawio>"
