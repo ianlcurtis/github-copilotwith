@@ -159,6 +159,69 @@ Prompt example to start examining the process to convert from one codebase to an
 You are an expert in [technology e.g. Springboot and Camel], please explain step by step how you would redesign and convert this from [ Source implementation e.g. Camel] to [target implementation e.g. Springboot native]?
 ```
 
+### Migrate by example
+Using an example migration for copilot to follow is a great way of getting really good results with minimal prompting.
+
+```
+Consider the Pyspark file <INSERT BLUEPRINT FILE PATH HERE> which was migrated from the C++ file "<BLUEPRINT SOURCE C++ FILE>"
+Create a Pyspark implementation of the "<C++ FILE TO BE MIGRATED>" using a similar approach.
+```
+
+### Migrate by flow
+This is a good option for complicated or multi-step migrations. Use a tool such as draw.io to create a flow diagram that describes the process required. Each box in the flow diagram can be a prompt. Export the diagram as XML and provide it as context for a migration prompt.
+
+### Migrate by steps
+This is good to break the process into steps that copilot can undertake to achieve a goal.
+```
+Step 1: Get DB2 Columns
+Please list all the column names for the DB2 tables for the <ENTITY> entity using this process.
+
+Step 2: Generate SQL
+Create a SQL query to fetch all <ENTITY> fields from the database using the DDL to create the necessary JOINS on each table in the query.
+
+Step 3: Generate MyBatis XML mapper
+Create me a MyBatis xml mapper file for the <ENTITY> object, using the sql output from Step 2. 
+
+Step 4: Add WHERE clause
+Add where clause to MyBatis XML output from Step 3. 
+```
+
+### Migrate by pseudo-code
+This is a good option for when there are many similar migrations. Create a good prompt using one of the methods mentioned. Then, parameterise the prompt to make it reusable across the different but similar migrations.
+
+A simple example:
+```
+$FILEPATH="myapp/src/module1"
+$DTONAME="module1_dto"
+
+Convert the file $FILEPATH from COBOL to C#. Use the DTO $DTONAME
+```
+
+An more complicated example that brings together some of these ideas:
+```
+You should use the following variables:
+$Drawio="<SQL GENERATION.drawio>"
+$EntityName="<ENTITY>"
+$DDLFile="<REFERENCE\DDL.sql>"
+$DAOInterface="<SERVICES\SRC\MYDAO.java>"
+
+Step 1: Get DB2 Columns
+There is a process to map a field in COBOL to a DB2 database column which is in the file $Drawio. 
+List all the column names for the DB2 tables for the $EntityName entity using this process.
+
+Step 2: Generate SQL
+The DDL file $DDLFile  defines the database schema.
+Create a SQL query to fetch all $EntityName fields from the database using the DDL to create the necessary JOINS on each table in the query.
+
+Step 3: Generate MyBatis XML mapper
+Create a MyBatis xml mapper file for the $EntityName object, using the sql output from Step 2. 
+The object has an specified interface which is represented as a DAO with file $DAOInterface. 
+
+Step 4: Add WHERE clause
+Add where clause to MyBatis XML output from Step 3. 
+The DDL file $DDLFile specifies the database schema. Supplement selection criteria from DAO and the database using the DDL.
+```
+
 ## Type
 The type of solution being migrated.
 - API
