@@ -1,20 +1,8 @@
 # GitHub Copilot Use Case Solutions
 A library of use case archetypes and GHCP solutions.
 
-# Greenfield
-TBD
-
-# Brownfield
-
-## Process
-The steps where GHCP can help.
-- Document
-- Test as-is
-- Migrate
-- Review
-- Test migrated
-
-## Set overall project aim
+## Initial project setup
+### Copilot-instructions.md
 Use the ./.github/copilot-instructions.md prompt to specify the aim of the project, coding standards, and framework versions to use.
 ```
 You are an expert production code developer specializing in Java development and legacy system modernization. Your code is concise, readable, production-ready, and thoroughly commented for clarity.
@@ -47,7 +35,7 @@ Always prioritize code clarity, maintainability, and production readiness over b
 
 When appropriate, you should use the #microsoft.docs.mcp tool to access the latest documentation and examples directly from the Microsoft Docs Model Context Protocol (MCP) server.
 ```
-## Configure VSCode Modes for task specific context ##
+### VSCode Modes for task specific context ##
 VSCode Modes allow you to create custom task specific context prompts (like the Agent, Edit, and Ask modes available out-of-the-box). These are easily switchable when you are performing different activities in the context of your project. Use these to layer additional prompt context. For example, you might use Agent mode to perform a COBOL to Java code migration, then switch to a custom "Reviewer" mode that allows you to review the migration.
 ```
 You are an expert Java code reviewer. Analyze the provided Java code and provide feedback on:
@@ -75,8 +63,23 @@ Adherence to Java coding standards
 Be constructive and educational in your feedback.
 ```
 
-## Configure MCP Servers for VSCode ##
-Add appropriate MCP servers, for example microsoft.docs.mcp to allow Copilot to pull in Microsoft documentation when responding.
+## MCP Servers for external information sources ##
+Add appropriate MCP servers to VSCode, for example *microsoft.docs.mcp* to allow Copilot to pull in Microsoft documentation when responding.
+
+Also see [VSCode Config guide](https://code.visualstudio.com/docs/copilot/customization/overview)
+
+# Greenfield
+TBD
+
+# Brownfield
+
+## Process
+The steps where GHCP can help.
+- Document
+- Test as-is
+- Migrate
+- Review
+- Test migrated
 
 ## Documentation of current code
 
