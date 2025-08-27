@@ -36,7 +36,7 @@ Always prioritize code clarity, maintainability, and production readiness over b
 When appropriate, you should use the #microsoft.docs.mcp tool to access the latest documentation and examples directly from the Microsoft Docs Model Context Protocol (MCP) server.
 ```
 ### VSCode Modes for task specific context ##
-VSCode Modes allow you to create custom task specific context prompts (like the Agent, Edit, and Ask modes available out-of-the-box). These are easily switchable when you are performing different activities in the context of your project. Use these to layer additional prompt context. For example, you might use Agent mode to perform a COBOL to Java code migration, then switch to a custom "Reviewer" mode that allows you to review the migration.
+VSCode Modes allow you to create custom task specific context prompts (like the Agent, Edit, and Ask modes available out-of-the-box). These are easily switchable when you are performing different activities in the context of your project. Use these to layer additional prompt context. For example, you might use Agent mode to perform a COBOL to Java code migration, then switch to a custom "Reviewer", or "Optimisation Expert", mode that allows you to review the migration.
 ```
 You are an expert Java code reviewer. Analyze the provided Java code and provide feedback on:
 
