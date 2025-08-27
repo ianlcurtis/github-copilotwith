@@ -230,4 +230,4 @@ The DDL file $DDLFile specifies the database schema. Supplement selection criter
 Fixes and workarounds for common issues
 
 ### Response matched public code
-Sometimes you will receive a message saying that the reponse was blocked as it matched public code. This is due to organisation level policy on what can be returned from Copilot. There are a few things to work around this issue, such as rephrasing, switching to a different mode (e.g. to "Ask" mode), or switching model. You can find some more tips to overcome this (here)[https://github.com/orgs/community/discussions/159805]
+Sometimes you will receive a message saying that the reponse was blocked as it matched public code. This is due to organisation level policy on what can be returned from Copilot. There are a few things to work around this issue, such as rephrasing, switching to a different mode (e.g. to "Ask" mode), or switching model. You can find some more tips to overcome this [here](https://github.com/orgs/community/discussions/159805)
