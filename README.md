@@ -15,7 +15,7 @@ The steps where GHCP can help.
 - Test migrated
 
 ## Set overall project aim
-Use the ./.github/copilot-instructions.md prompt to specify the aim of the project.
+Use the ./.github/copilot-instructions.md prompt to specify the aim of the project, coding standards, and framework versions to use.
 ```
 You are an expert production code developer specializing in Java development and legacy system modernization. Your code is concise, readable, production-ready, and thoroughly commented for clarity.
 
@@ -47,7 +47,35 @@ Always prioritize code clarity, maintainability, and production readiness over b
 
 When appropriate, you should use the #microsoft.docs.mcp tool to access the latest documentation and examples directly from the Microsoft Docs Model Context Protocol (MCP) server.
 ```
-## Configure VSCode ##
+## Configure VSCode Modes for task specific context ##
+VSCode Modes allow you to create custom task specific context prompts (like the Agent, Edit, and Ask modes available out-of-the-box). These are easily switchable when you are performing different activities in the context of your project. Use these to layer additional prompt context. For example, you might use Agent mode to perform a COBOL to Java code migration, then switch to a custom "Reviewer" mode that allows you to review the migration.
+```
+You are an expert Java code reviewer. Analyze the provided Java code and provide feedback on:
+
+Code Quality: Syntax, readability, naming conventions, and best practices
+Performance: Identify potential bottlenecks and optimization opportunities
+Security: Look for vulnerabilities, input validation issues, and security anti-patterns
+Design Patterns: Assess proper use of OOP principles and design patterns
+Testing: Evaluate test coverage and quality of unit tests
+Documentation: Check for adequate comments and JavaDoc
+
+Output Format:
+List critical issues first, then suggestions for improvement
+Provide specific line references when possible
+Suggest concrete improvements with code examples
+Rate overall code quality (1-10) with brief justification
+
+Focus Areas:
+Exception handling
+Resource management (try-with-resources)
+Thread safety (if applicable)
+Memory efficiency
+Adherence to Java coding standards
+
+Be constructive and educational in your feedback.
+```
+
+## Configure MCP Servers for VSCode ##
 Add appropriate MCP servers, for example microsoft.docs.mcp to allow Copilot to pull in Microsoft documentation when responding.
 
 ## Documentation of current code
@@ -226,8 +254,11 @@ Add where clause to MyBatis XML output from Step 3.
 The DDL file $DDLFile specifies the database schema. Supplement selection criteria from DAO and the database using the DDL.
 ```
 
-# Workarounds for Common Problems
+# Workarounds, Common Problems, Troubleshooting
 Fixes and workarounds for common issues
+
+## Context limit exceeded
+When working with large codebases it is not uncommon to hit the context window for the underlying LLM. For the most part VSCode (or other IDEs) will do their best to restrict context to only that necessary but that is not always enough. If possible create summarisation artifacts for your codebase, for example multiple ReadMe.mds, and include these as context explicitly rather than allowing Copilot to pull in many files from the workspace (use the "re-run without workspace" link when needed). You can troubleshoot context problems by reviewing context being packaged and sent to the back-end LLM - to do this view the *Output* terminal tab and switch the source to *GitHub Copilot Chat*. Here you review the .md files being prepared and sent with each request.
 
 ## Response matched public code
 Sometimes you will receive a message saying that the reponse was blocked as it matched public code. This is due to organisation level policy on what can be returned from Copilot. There are a few things to work around this issue, such as rephrasing, switching to a different mode (e.g. to "Ask" mode), or switching model. You can find some more tips to overcome this [here](https://github.com/orgs/community/discussions/159805)
