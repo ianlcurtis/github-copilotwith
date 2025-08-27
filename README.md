@@ -1,5 +1,5 @@
 # GitHub Copilot Use Case Solutions
-A library of use case archetypes and GHCP solutions.
+A library of use case archetypes, GHCP solutions, and GHCP advice and best practice.
 
 ## Initial project setup
 ### Copilot-instructions.md
