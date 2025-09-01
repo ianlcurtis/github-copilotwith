@@ -257,6 +257,11 @@ Add where clause to MyBatis XML output from Step 3.
 The DDL file $DDLFile specifies the database schema. Supplement selection criteria from DAO and the database using the DDL.
 ```
 
+## Review and Remediation ##
+### Sonar Qube ###
+If you use Sonar Qube for code scanning, you can use copilot to address flagged issues. Use an MCP Server such as [here]9https://github.com/SonarSource/sonarqube-mcp-server) to allow copilot to query issues and resolve. 
+[see also](https://community.sonarsource.com/t/introducing-the-sonarqube-mcp-server-alpha/144204)
+
 # Workarounds, Common Problems, Troubleshooting
 Fixes and workarounds for common issues
 
