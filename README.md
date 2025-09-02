@@ -114,6 +114,12 @@ Headers:
 I want to test the project before and after a code conversion. What would be the best way to do this?
 ```
 
+```
+Consider the legacy code <LEGACY FILE OR FOLDER> and the migrated code <MIGRATED FILE OR FOLDER>
+I want to thoroughly system/black-box test the code before and after a code conversion using the same data set containing happy, unhappy, and edge cases. 
+What would be the best way to do this?
+```
+
 ### Prompts to assess existing unit test coverage:
 Github Copilot can create additional high value unit test coverage, which can drive code quality improvement - for example, by discovering unhandled edge cases. 
 ```
