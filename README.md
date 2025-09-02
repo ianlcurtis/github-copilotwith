@@ -120,6 +120,11 @@ I want to thoroughly system/black-box test the code before and after a code conv
 What would be the best way to do this?
 ```
 
+```
+I am happy with the suggested test approach. Create the necessary files in line with your suggestion in the folder <FOLDER NAME>.
+The folder should contain the source code and a subfolder for the test data files.
+```
+
 ### Prompts to assess existing unit test coverage:
 Github Copilot can create additional high value unit test coverage, which can drive code quality improvement - for example, by discovering unhandled edge cases. 
 ```
