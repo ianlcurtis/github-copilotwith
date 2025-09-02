@@ -1,12 +1,13 @@
 
 
-<table width="100%" border="0"><tr>
-<td>
-	<h1>GitHub Copilot Use Case Solutions</h1>
-	<div>A library of use case archetypes, GHCP solutions, and GHCP advice and best practice.</div>
-</td>
-<td align="right"><img src="img/githubcopilot-colour.png" alt="GitHub Copilot Logo" width="120" height="100"/></td>
-</tr></table>
+
+<div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+	<div>
+		<h1 style="margin-bottom: 0.2em;">GitHub Copilot Use Case Solutions</h1>
+		<div style="font-size:1.1em; font-weight:400;">A library of use case archetypes, GHCP solutions, and GHCP advice and best practice.</div>
+	</div>
+	<img src="img/githubcopilot-colour.png" alt="GitHub Copilot Logo" width="120" height="100" style="margin-left: 16px;"/>
+</div>
 
 ## Index
 - [Initial project setup](#initial-project-setup)
