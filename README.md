@@ -1,5 +1,34 @@
-# GitHub Copilot Use Case Solutions
-A library of use case archetypes, GHCP solutions, and GHCP advice and best practice.
+
+
+<table width="100%"><tr>
+<td>
+	<h1>GitHub Copilot Use Case Solutions</h1>
+	<div>A library of use case archetypes, GHCP solutions, and GHCP advice and best practice.</div>
+</td>
+<td align="right"><img src="img/githubcopilot-colour.png" alt="GitHub Copilot Logo" width="120" height="100"/></td>
+</tr></table>
+
+## Index
+- [Initial project setup](#initial-project-setup)
+	- [Copilot-instructions.md](#copilot-instructionsmd)
+	- [VSCode Modes for task specific context](#vscode-modes-for-task-specific-context)
+	- [MCP Servers for external information sources](#mcp-servers-for-external-information-sources)
+- [Greenfield](#greenfield)
+- [Brownfield](#brownfield)
+	- [Process](#process)
+	- [Documentation](#documentation)
+	- [Testing](#testing)
+		- [System Testing](#system-testing)
+		- [Unit testing](#unit-testing)
+		- [Mocking](#mocking)
+		- [Test data](#test-data)
+		- [Performance testing](#performance-testing)
+	- [Migration](#migration)
+		- [Migrate by example](#migrate-by-example)
+		- [Migrate by flow](#migrate-by-flow)
+		- [Migrate by steps](#migrate-by-steps)
+		- [Migrate by pseudo-code](#migrate-by-pseudo-code)
+	- [Review and Remediation](#review-and-remediation)
 
 ## Initial project setup
 ### Copilot-instructions.md
