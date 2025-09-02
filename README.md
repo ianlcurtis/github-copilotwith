@@ -1,6 +1,6 @@
 
 
-<table width="100%"><tr>
+<table width="100%" border="0"><tr>
 <td>
 	<h1>GitHub Copilot Use Case Solutions</h1>
 	<div>A library of use case archetypes, GHCP solutions, and GHCP advice and best practice.</div>
