@@ -35,7 +35,8 @@ Always prioritize code clarity, maintainability, and production readiness over b
 
 When appropriate, you should use the #microsoft.docs.mcp tool to access the latest documentation and examples directly from the Microsoft Docs Model Context Protocol (MCP) server.
 ```
-### VSCode Modes for task specific context ##
+
+### VSCode Modes for task specific context
 VSCode Modes allow you to create custom task specific context prompts (like the Agent, Edit, and Ask modes available out-of-the-box). These are easily switchable when you are performing different activities in the context of your project. Use these to layer additional prompt context. For example, you might use Agent mode to perform a COBOL to Java code migration, then switch to a custom "Reviewer", or "Optimisation Expert", mode that allows you to review the migration.
 ```
 You are an expert Java code reviewer. Analyze the provided Java code and provide feedback on:
@@ -63,7 +64,7 @@ Adherence to Java coding standards
 Be constructive and educational in your feedback.
 ```
 
-## MCP Servers for external information sources ##
+### MCP Servers for external information sources
 Add appropriate MCP servers to VSCode, for example *microsoft.docs.mcp* to allow Copilot to pull in Microsoft documentation when responding.
 
 Also see [VSCode Config guide](https://code.visualstudio.com/docs/copilot/customization/overview)
@@ -81,9 +82,9 @@ The steps where GHCP can help.
 - Review
 - Test migrated
 
-## Documentation of current code
+## Documentation
 
-### Prompt to give a high level description of what a project does:
+Prompt to give a high level description of what a project does:
 ```
 We are new starters and have never touched this code before.
 [Can you create a ReadMe file explaining] / [Can you explain] what this project does?
@@ -91,12 +92,12 @@ Start with a high-level summary of the codebase, then break the project down int
 The explanation should be written in a way that it can be understood by a person joining the team that is unfamiliar with the code.
 ```
 
-### Prompt to give a description of a specific file e.g. an API controller:
+Prompt to give a description of a specific file e.g. an API controller:
 ```
 Explain the [file name], what is the input, its output and what is it dependent upon. Note that I do not know this codebase, do not make any assumptions about my knowledge.
 ```
 
-### Prompt to document a file e.g. route xml in Java:
+Prompt to document a file e.g. route xml in Java:
 ```
 Generate a mermaid diagram for this API project for our documentation? Additionally include a synopsis of each route formatted like this:
  
@@ -109,33 +110,44 @@ Headers:
 
 ## Testing
 
-### Prompt to suggest testing approach:
+Prompt to suggest testing approach:
 ```
 I want to test the project before and after a code conversion. What would be the best way to do this?
 ```
 
+### System Testing
+Prompt to suggest system testing approach:
 ```
 Consider the legacy code <LEGACY FILE OR FOLDER> and the migrated code <MIGRATED FILE OR FOLDER>
 I want to thoroughly system/black-box test the code before and after a code conversion using the same data set containing happy, unhappy, and edge cases. 
 What would be the best way to do this?
 ```
 
+Prompt to implement a proposed system testing approach:
 ```
 I am happy with the suggested test approach. Create the necessary files in line with your suggestion in the folder <FOLDER NAME>.
 The folder should contain the source code and a subfolder for the test data files.
 ```
 
-### Prompts to assess existing unit test coverage:
+Prompt to review system test coverage:
+```
+Consider the legacy code <LEGACY FILE OR FOLDER> and the migrated code <MIGRATED FILE OR FOLDER> and the test framework <TEST FRAMEWORK FOLDER>
+Review the test data being used by the test framework for completeness, providing a test coverage matrix which identifies any code paths that lack adequate testing so that we can create test data to cover these paths.
+```
+
+### Unit testing
 Github Copilot can create additional high value unit test coverage, which can drive code quality improvement - for example, by discovering unhandled edge cases. 
 ```
 Review the existing unit test coverage of the MODULE_NAME module consider existing tests with a view to adding additional tests in the future.
 Generate a new readme markdown file named after the module name that provides an overview of the module and the test scenarios that currently exist.
 ```
+
 ```
 Are there any additional tests I should include, or are all test angles covered?
 Consider that I am using the [test framework e.g. Mockito] test framework.
 Pay attention to edge cases and happy / unhappy paths. Provide a test coverage matrix.
 ```
+
 ```
 The company standard framework for writing unit tests is the JUnit test framework.
 Review the existing unit test coverage of the #folder:MODULE_NAME.
@@ -144,14 +156,14 @@ If you do not find any unit tests, state in the readme file that there are no ex
 **Ensure a comprehensive overview of all tests within this module**
 ```
 
-### Prompt to create a plan to implement missing unit test coverage:
+Prompt to create a plan to implement missing unit test coverage:
 ```
 Consider the #MODULE-README.md and add a section at the end that includes a plan to enhance unit test coverage. 
 You must include unit tests to enhance resilience, happy and unhappy paths and any edge cases. The plan to enhance unit test coverage must be ordered so we can work through it together.
 Please do not include integration, performance or stress tests at this point. We will consider these at a later date.
 ```
 
-### Prompt to implement the plan created in the previous prompt: 
+Prompt to implement the plan created in the previous prompt: 
 (The generated plan should be selected with the cursor)
 ```
 Using this #selection, detail a plan to enhance unit test coverage. I want to focus on enhancing the resilience and maintainability of this module. 
@@ -166,7 +178,8 @@ The tests should compliment those that exist already, and create coverage for ha
 Use the [test framework e.g. Mockito] test framework.
 You should comment your test cases thoroughly so that the objective is clearly understandable.
 ```
-Variation on prompt to write test cases, can be run after the previous prompt which identifies missing angles. 
+
+Variation on prompt to write test cases, can be run after the previous prompt which identifies missing angles:
 You should include existing test case code as context:
 ```
 Can you write the test cases based on your advice.
@@ -174,13 +187,15 @@ Use the [test framework e.g. Mockito] test framework, and try to match our exist
 You should comment your test cases thoroughly so that the objective is clearly understandable.
 ```
 
-### Prompt to mock dependencies:
+### Mocking
+Prompt to mock dependencies:
 ```
 Can you help me mock dependencies of this service.
 Ensure that any dependencies that are not within the workspace are mocked so that the code can be run in isolation.
 ```
 
-### Prompt to create test data (small example test data required):
+### Test data
+Prompt to create test data (small example test data required):
 ```
 Can you create me 100 test data samples. The format should be as follows:
 
@@ -191,7 +206,7 @@ USERID,NAME,FAVOURITE_COLOUR
 004,Ian,Green
 ```
 
-### Prompt to create performance tests:
+### Performance testing
 ```
 ?
 ```
@@ -268,8 +283,8 @@ Add where clause to MyBatis XML output from Step 3.
 The DDL file $DDLFile specifies the database schema. Supplement selection criteria from DAO and the database using the DDL.
 ```
 
-## Review and Remediation ##
-### SonarQube ###
+## Review and Remediation
+### SonarQube
 If you use SonarQube for code scanning, you can use copilot to address flagged issues. Use an MCP Server such as [here](https://github.com/SonarSource/sonarqube-mcp-server) to allow copilot to query issues and resolve. 
 [see also](https://community.sonarsource.com/t/introducing-the-sonarqube-mcp-server-alpha/144204)
 
