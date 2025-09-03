@@ -245,7 +245,7 @@ USERID,NAME,FAVOURITE_COLOUR
 
 ### QA
 QA teams can use copilot to create test cases, using an MCP server for either GitHub or ADO. Copilot can pull details of the user story including acceptance criteria, and create and link a test case with test steps.
-[GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/use-the-github-mcp-server) [ADO MCP Server](https://devblogs.microsoft.com/devops/azure-devops-mcp-server-public-preview/)
+See [GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/use-the-github-mcp-server) and [ADO MCP Server](https://devblogs.microsoft.com/devops/azure-devops-mcp-server-public-preview/).
 ```
 You are processing user story <USER STORY NUMBER>
  
