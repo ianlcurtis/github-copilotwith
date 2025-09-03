@@ -25,6 +25,7 @@ A library of use case archetypes, GHCP solutions, and GHCP advice and best pract
 		- [Mocking](#mocking)
 		- [Test data](#test-data)
 		- [Performance testing](#performance-testing)
+		- [QA](#qa)
 	- [Migration](#migration)
 		- [Migrate by example](#migrate-by-example)
 		- [Migrate by flow](#migrate-by-flow)
@@ -242,6 +243,19 @@ USERID,NAME,FAVOURITE_COLOUR
 ?
 ```
 
+### QA
+QA teams can use copilot to create test cases, using an MCP server for either GitHub or ADO. Copilot can pull details of the user story including acceptance criteria, and create and link a test case with test steps.
+[GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/use-the-github-mcp-server) [ADO MCP Server](https://devblogs.microsoft.com/devops/azure-devops-mcp-server-public-preview/)
+```
+You are processing user story <USER STORY NUMBER>
+ 
+Consider the user story description, and the acceptance criteria, and also the document <DOCUMENT PATH> which describes the logic of the new feature.
+ 
+You  should do the following: 
+Create a test case for testing this new feature
+Link the test case to the user story
+Add test steps, each with an action and a result, that thoroughly test all aspects of the new functionality.
+```
 
 ## Migration
 Migration from one code base to another.
