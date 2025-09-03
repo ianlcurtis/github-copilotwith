@@ -252,9 +252,9 @@ You are processing user story <USER STORY NUMBER>
 Consider the user story description, and the acceptance criteria, and also the document <DOCUMENT PATH> which describes the logic of the new feature.
  
 You  should do the following: 
-Create a test case for testing this new feature
-Link the test case to the user story
-Add test steps, each with an action and a result, that thoroughly test all aspects of the new functionality.
+1. Create a test case for testing this new feature
+2. Link the test case to the user story
+3. Add test steps, each with an action and a result, that thoroughly test all aspects of the new functionality.
 ```
 
 ## Migration
