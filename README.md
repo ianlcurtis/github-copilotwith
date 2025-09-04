@@ -1,7 +1,3 @@
-
-
-
-
 <p align="left">
 	<img src="img/githubcopilot-colour.png" alt="GitHub Copilot Logo" width="120" height="100"/>
 </p>
@@ -31,6 +27,7 @@ A library of use case archetypes, GHCP solutions, and GHCP advice and best pract
 		- [Migrate by flow](#migrate-by-flow)
 		- [Migrate by steps](#migrate-by-steps)
 		- [Migrate by pseudo-code](#migrate-by-pseudo-code)
+		- [Migrate UI code](#migrate-ui-code)
 	- [Review and Remediation](#review-and-remediation)
 
 ## Initial project setup
@@ -326,6 +323,21 @@ The object has an specified interface which is represented as a DAO with file $D
 Step 4: Add WHERE clause
 Add where clause to MyBatis XML output from Step 3. 
 The DDL file $DDLFile specifies the database schema. Supplement selection criteria from DAO and the database using the DDL.
+```
+### Migrate UI code
+Use copilot to migrate complicated legacy code screens to modern web frameworks.
+```
+I have many complex Java Swing UIs that I want to convert to React. The top level screen UIs have many tabs and sub windows, and example of this is file <FILE PATH>. Copilot is not having much success doing this due to the complexity of the UI.
+ 
+Create a detailed generic plan in a README.md that consists of incremental steps that copilot can follow. The steps should break the process of migration to React into more manageable steps that would give copilot greater accuracy.
+ 
+For example:
+Analyse the top level Java screen, noting the properties of all UI components on the screen.
+Consider how these components would be recreated in React and create a plan to build this in this empty React app <REACT APP FOLDER>
+Check that the screen matches exactly the source screen.
+Consider all sub-screens of the top level screen etc
+
+This is just an example, you should use your own understanding to create the best plan. You should be able to do this migration by using just the Java source code.
 ```
 
 ## Review and Remediation
