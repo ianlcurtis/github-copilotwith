@@ -28,6 +28,7 @@ A library of use case archetypes, GHCP solutions, and GHCP advice and best pract
 		- [Migrate by steps](#migrate-by-steps)
 		- [Migrate by pseudo-code](#migrate-by-pseudo-code)
 		- [Migrate UI code](#migrate-ui-code)
+	- [Correcting Copilot](#correcting-copilot)
 	- [Debugging](#debugging)
 		- [AKS](#aks)
 	- [Review and Remediation](#review-and-remediation)
@@ -341,6 +342,19 @@ For example:
 4. Consider all sub-screens of the top level screen etc
 
 This is just an example, you should use your own understanding to create the best plan. You should be able to do this migration by using just the Java source code.
+```
+Once you have a documented plan, ask copilot to execute incrementally
+```
+Execute phase 1 only
+```
+## Correcting Copilot
+Copilot can often make mistakes navigating complicated codebases and implementing changes. Say for example, you are executing a plan that copilot has generated (such as in the previous UI code example). You may find that copilot has missed parts of the migration, perhaps UI elements you were expecting have been ommitted from the migration. It is a useful practice to ask copilot why it made the mistake. This can then be used to make a better plan for copilot to follow.
+```
+Consider the source file <FILE PATH>, and migrated file <FILE PATH>. The source file has [e.g. 5 UI controls]. However, the migrated file only has [e.g. 2 UI controls]. The migrated file should have identical functionality.
+
+Analyse why you made this mistake and what you would do next time to ensure that you get the migration correct first time.
+
+Once you have done this, add the improvements to the README.md plan.
 ```
 
 ## Debugging
