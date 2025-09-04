@@ -32,6 +32,10 @@ A library of use case archetypes, GHCP solutions, and GHCP advice and best pract
 	- [Debugging](#debugging)
 		- [AKS](#aks)
 	- [Review and Remediation](#review-and-remediation)
+		- [SonarQube](#sonarqube)
+- [Workarounds, Common Problems, Troubleshooting](#workarounds-common-problems-troubleshooting)
+	- [Context limit exceeded](#context-limit-exceeded)
+	- [Response matched public code](#response-matched-public-code)
 
 
 ## Initial project setup
