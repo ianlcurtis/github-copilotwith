@@ -332,10 +332,10 @@ I have many complex Java Swing UIs that I want to convert to React. The top leve
 Create a detailed generic plan in a README.md that consists of incremental steps that copilot can follow. The steps should break the process of migration to React into more manageable steps that would give copilot greater accuracy.
  
 For example:
-Analyse the top level Java screen, noting the properties of all UI components on the screen.
-Consider how these components would be recreated in React and create a plan to build this in this empty React app <REACT APP FOLDER>
-Check that the screen matches exactly the source screen.
-Consider all sub-screens of the top level screen etc
+1. Analyse the top level Java screen, noting the properties of all UI components on the screen.
+2. Consider how these components would be recreated in React and create a plan to build this in this empty React app <REACT APP FOLDER>
+3. Check that the screen matches exactly the source screen.
+4. Consider all sub-screens of the top level screen etc
 
 This is just an example, you should use your own understanding to create the best plan. You should be able to do this migration by using just the Java source code.
 ```
