@@ -28,7 +28,10 @@ A library of use case archetypes, GHCP solutions, and GHCP advice and best pract
 		- [Migrate by steps](#migrate-by-steps)
 		- [Migrate by pseudo-code](#migrate-by-pseudo-code)
 		- [Migrate UI code](#migrate-ui-code)
+	- [Debugging](#debugging)
+		- [AKS](#aks)
 	- [Review and Remediation](#review-and-remediation)
+
 
 ## Initial project setup
 ### Copilot-instructions.md
@@ -339,6 +342,10 @@ For example:
 
 This is just an example, you should use your own understanding to create the best plan. You should be able to do this migration by using just the Java source code.
 ```
+
+## Debugging
+### AKS
+Use copilot to debug problems with apps running on AKS by installing the AKS MCP server. See [docs here](https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/tools/azure-aks) and [blog here](https://blog.aks.azure.com/2025/08/06/aks-mcp-server)
 
 ## Review and Remediation
 ### SonarQube
