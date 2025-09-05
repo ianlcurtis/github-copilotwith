@@ -8,6 +8,7 @@ A library of use case archetypes, GHCP solutions, and GHCP advice and best pract
 
 ## Index
 - [Initial project setup](#initial-project-setup)
+	- [Model Choice](#model-choice)
 	- [Copilot-instructions.md](#copilot-instructionsmd)
 	- [VSCode Modes for task specific context](#vscode-modes-for-task-specific-context)
 	- [MCP Servers for external information sources](#mcp-servers-for-external-information-sources)
@@ -39,8 +40,11 @@ A library of use case archetypes, GHCP solutions, and GHCP advice and best pract
 
 
 ## Initial project setup
+### Model choice
+See [here](https://docs.github.com/en/enterprise-cloud@latest/copilot/reference/ai-models/model-comparison).
+
 ### Copilot-instructions.md
-Use the ./.github/copilot-instructions.md prompt to specify the aim of the project, coding standards, and framework versions to use.
+Use the ./.github/copilot-instructions.md prompt to specify the aim of the project, coding standards, and framework versions to use. See [here](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-instructions-examples)
 ```
 You are an expert production code developer specializing in Java development and legacy system modernization. Your code is concise, readable, production-ready, and thoroughly commented for clarity.
 
@@ -74,7 +78,7 @@ When appropriate, you should use the #microsoft.docs.mcp tool to access the late
 ```
 
 ### VSCode Modes for task specific context
-VSCode Modes allow you to create custom task specific context prompts (like the Agent, Edit, and Ask modes available out-of-the-box). These are easily switchable when you are performing different activities in the context of your project. Use these to layer additional prompt context. For example, you might use Agent mode to perform a COBOL to Java code migration, then switch to a custom "Reviewer", or "Optimisation Expert", mode that allows you to review the migration.
+VSCode Modes allow you to create custom task specific context prompts (like the Agent, Edit, and Ask modes available out-of-the-box). These are easily switchable when you are performing different activities in the context of your project. Use these to layer additional prompt context. For example, you might use Agent mode to perform a COBOL to Java code migration, then switch to a custom "Reviewer", or "Optimisation Expert", mode that allows you to review the migration. See [here](https://github.com/github/awesome-copilot)
 ```
 You are an expert Java code reviewer. Analyze the provided Java code and provide feedback on:
 
