@@ -29,6 +29,7 @@ A library of use case archetypes, GHCP solutions, and GHCP advice and best pract
 		- [Migrate by steps](#migrate-by-steps)
 		- [Migrate by pseudo-code](#migrate-by-pseudo-code)
 		- [Migrate UI code](#migrate-ui-code)
+		- [Migrate database code](#migrate-database-code)
 	- [Correcting Copilot](#correcting-copilot)
 	- [Debugging](#debugging)
 		- [AKS](#aks)
@@ -355,6 +356,9 @@ Once you have a documented plan, ask copilot to execute incrementally
 ```
 Execute phase 1 only
 ```
+### Migrate database code
+Export the database DDL and provide this to copilot so that it can reason over the schema.
+
 ## Correcting Copilot
 Copilot can often make mistakes navigating complicated codebases and implementing changes. Say for example, you are executing a plan that copilot has generated (such as in the previous UI code example). You may find that copilot has missed parts of the migration, perhaps UI elements you were expecting have been ommitted from the migration. It is a useful practice to ask copilot why it made the mistake. This can then be used to make a better plan for copilot to follow.
 ```
