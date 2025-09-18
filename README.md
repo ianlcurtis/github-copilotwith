@@ -109,7 +109,7 @@ Be constructive and educational in your feedback.
 ### MCP Servers for external information sources
 Add appropriate MCP servers to VSCode, for example *microsoft.docs.mcp* to allow Copilot to pull in Microsoft documentation when responding.
 
-Also see [VSCode Config guide](https://code.visualstudio.com/docs/copilot/customization/overview)
+> ⭐ **Tip** Also see [VSCode Config guide](https://code.visualstudio.com/docs/copilot/customization/overview)
 
 # Greenfield
 TBD
@@ -255,7 +255,8 @@ USERID,NAME,FAVOURITE_COLOUR
 
 ### QA
 QA teams can use copilot to create test cases, using an MCP server for either GitHub or ADO. Copilot can pull details of the user story including acceptance criteria, and create and link a test case with test steps.
-See [GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/use-the-github-mcp-server) and [ADO MCP Server](https://devblogs.microsoft.com/devops/azure-devops-mcp-server-public-preview/).
+
+> ⭐ **Tip** See [GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/use-the-github-mcp-server) and [ADO MCP Server](https://devblogs.microsoft.com/devops/azure-devops-mcp-server-public-preview/).
 ```
 You are processing user story <USER STORY NUMBER>
  
@@ -352,7 +353,8 @@ For example:
 
 This is just an example, you should use your own understanding to create the best plan. You should be able to do this migration by using just the Java source code.
 ```
-Once you have a documented plan, ask copilot to execute incrementally
+
+> ⭐ **Tip** Once you have a documented plan, ask copilot to execute incrementally so that you can review the progress.
 ```
 Execute phase 1 only
 ```
