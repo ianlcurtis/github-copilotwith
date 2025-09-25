@@ -230,6 +230,118 @@ Use the [test framework e.g. Mockito] test framework, and try to match our exist
 You should comment your test cases thoroughly so that the objective is clearly understandable.
 ```
 
+The prompt is designed to provide actionable insights that go beyond simple metrics, helping you build a more effective and valuable test suite that truly protects your application and supports your development process. 
+```
+UNIT TEST QUALITY ASSESSMENT PROMPT
+
+You are an expert C# .NET testing consultant. Analyze the unit tests in this project using a comprehensive quality framework. Provide a detailed assessment report that goes beyond simple code coverage metrics.
+
+ANALYSIS REQUIREMENTS
+
+For Each Individual Test:
+1. Test Identity: Class name, method name, and what it's testing
+2. Quality Score (1-5): Based on clarity, independence, coverage, and value
+3. Strengths: What this test does well
+4. Issues: Specific problems or improvements needed
+5. Business Value: What risk this test mitigates
+6. Recommendations: Actionable improvement suggestions
+
+For the Test Suite Overall:
+1. Suite Health Metrics: Speed, flakiness, maintainability
+2. Coverage Analysis: Not just LOC, but functional coverage quality
+3. Business Risk Assessment: Critical paths that are well/poorly tested
+4. Technical Debt: Test maintenance burden and code quality issues
+5. Strategic Recommendations: Priority improvements for maximum impact
+
+EVALUATION CRITERIA
+
+Individual Test Quality (1-5 scale):
+- Clarity (25%): Descriptive naming, AAA pattern, single responsibility, readability
+- Independence (25%): No test interdependencies, repeatable, isolated
+- Coverage Quality (25%): Tests meaningful scenarios, edge cases, error conditions
+- Business Value (25%): Tests critical functionality, prevents real defects
+
+Test Suite Dimensions:
+- Defect Detection Power: Mutation testing potential, regression prevention
+- Business Coverage: Critical path protection, requirement traceability  
+- Maintainability: Test code quality, update frequency, technical debt
+- Execution Efficiency: Speed, reliability, CI/CD integration
+- Documentation Value: Tests as living documentation, onboarding aid
+
+OUTPUT FORMAT
+
+Individual Test Report:
+-------
+Test: [ClassName].[MethodName]
+Testing: [What behavior/scenario]
+Quality Score: [1-5] (Clarity: [1-5], Independence: [1-5], Coverage: [1-5], Value: [1-5])
+Strengths: [Bullet points]
+Issues: [Specific problems]
+Business Value: [Risk mitigation provided]
+Priority: [High/Medium/Low for improvement]
+Recommendations: [Actionable suggestions]
+-------
+
+Test Suite Summary:
+-------
+Test Suite Health Report
+Overall Score: [1-5]
+Total Tests Analyzed: [count]
+High Quality Tests (4-5): [count] ([percentage]%)
+Tests Needing Improvement (1-3): [count] ([percentage]%)
+
+Key Findings:
+- Strengths: [What the suite does well]
+- Critical Gaps: [Missing coverage or quality issues]
+- Technical Debt: [Test maintenance issues]
+- Performance: [Speed and reliability concerns]
+
+Strategic Recommendations:
+1. Immediate (High Priority): [Critical fixes needed]
+2. Short Term (Medium Priority): [Quality improvements]
+3. Long Term (Low Priority): [Nice-to-have enhancements]
+
+Metrics Dashboard:
+- Average Test Quality Score: [score]
+- Business Critical Path Coverage: [assessment]
+- Test Maintenance Burden: [High/Medium/Low]
+- Defect Detection Confidence: [High/Medium/Low]
+-------
+
+ANALYSIS FOCUS AREAS
+
+Look for these patterns:
+- Anti-patterns: Tests that test implementation details, overly complex setup, unclear assertions
+- Missing scenarios: Edge cases, error conditions, boundary values
+- Flaky tests: Time dependencies, external service calls, shared state
+- Redundant tests: Multiple tests covering identical scenarios
+- Orphaned tests: Tests not aligned with current requirements
+
+Assess these technical aspects:
+- Use of mocking frameworks (Moq, NSubstitute)
+- Test data management and builders
+- Assertion clarity and specificity
+- Exception testing patterns
+- Async/await testing patterns
+- Integration vs unit test boundaries
+
+Business context evaluation:
+- Alignment with user stories/requirements
+- Risk-based test prioritization
+- Regulatory or compliance test coverage
+- Performance and security test coverage
+
+INSTRUCTIONS:
+1. Scan all test files in the project (typically *Test.cs, *Tests.cs files)
+2. Apply the evaluation framework to each test method
+3. Identify patterns and trends across the test suite
+4. Provide specific, actionable recommendations
+5. Focus on improvements that deliver maximum business value
+6. Consider the team's testing maturity level in recommendations
+
+Generate a comprehensive report that development teams can use to systematically improve their testing strategy and quality.
+```
+
 ### Mocking
 Prompt to mock dependencies:
 ```
