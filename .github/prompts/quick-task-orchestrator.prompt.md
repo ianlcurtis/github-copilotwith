@@ -30,28 +30,28 @@ All task artifacts go in: `0.Delivery/[task-name]/`
 
 ### Phase Execution
 
-**Phase 1: Objective Gathering** (#file:quick-tasks/1.task-objective)
+**Phase 1: Objective Gathering** (#file:quick-task/1.task-objective.prompt.md)
 - Clarify exactly what needs to be done
 - Identify success criteria
 - Note constraints or requirements
 - Ask 2-3 clarifying questions max
 - Create `objective.md`
 
-**Phase 2: Approach Options** (#file:quick-tasks/2.task-approaches)
+**Phase 2: Approach Options** (#file:quick-task/2.task-approaches.prompt.md)
 - Analyze the objective
 - Present 2-3 viable approaches
 - Include pros/cons and time estimates
 - User selects preferred approach
 - Create `approach-options.md` with selection noted
 
-**Phase 3: Plan Creation** (#file:quick-tasks/3.task-plan)
+**Phase 3: Plan Creation** (#file:quick-task/3.task-plan.prompt.md)
 - Break work into 3-7 concrete steps
 - Identify files/code to modify
 - Note potential risks
 - Create `plan.md` with checklist
 - Create `progress.md` for tracking
 
-**Phase 4: Execution** (#file:quick-tasks/4.task-execute)
+**Phase 4: Execution** (#file:quick-task/4.task-execute.prompt.md)
 - Work through plan step-by-step
 - Update `progress.md` after each step
 - Mark items complete in `plan.md`
@@ -95,6 +95,6 @@ Entire process should complete within one working day (max 8 hours).
 ## Next Steps
 When ready, begin:
 ```
-#file:quick-tasks/1.task-objective
+#file:quick-task/1.task-objective.prompt.md
 ```
 ````
