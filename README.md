@@ -388,7 +388,9 @@ Once you have created the test data, you can use a prompt to create the test har
 Create a c#.net console application that can be configured to run the tests that this prompt will create
 ```
 
-With a few small changes by copilot this same console application can be enhanced to execute the same tests against the converted c# code. After which, a file comparison tool can be used to look for differences in the output which would indicate problems with the code migration.  
+With a few small changes by copilot this same console application can be enhanced to execute the same tests against the converted c# code. After which, a file comparison tool can be used to look for differences in the output which would indicate problems with the code migration.
+
+See examples here https://github.com/ianlcurtis/migration-test-harness
 
 
 ### QA
