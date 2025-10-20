@@ -22,6 +22,7 @@ A library of use case archetypes, GHCP solutions, and GHCP advice and best pract
 		- [Mocking](#mocking)
 		- [Test data](#test-data)
 		- [Performance testing](#performance-testing)
+		- [Test harnesses](#test-harnesses)
 		- [QA](#qa)
 	- [Migration](#migration)
 		- [Migrate by example](#migrate-by-example)
@@ -366,6 +367,30 @@ USERID,NAME,FAVOURITE_COLOUR
 ?
 ```
 
+### Test harnesses
+When using copilot to make large-scale changes or migrations it is difficult to get confidence without being able to test the before and after state in a *mechanical* way. Luckily Copilot can help here, building out large data sets that are specific to the use case, and test harnesses that can execute them pre and post migration. 
+Consider a situation where we are migrating SQL Server stored procedures to C# code.
+The following prompt creates a prompt that you can run against, in this case, a database and stored procedure, to create test data. The prompt can be executed against each stored procedure to create the data necessary to test multiple paths through the code.
+```
+I have a stored procedure in a SQL Server database that I want to thoroughly test - happy path, unhappy path, and edge cases. This will involve creating a comprehensive set of test data with which to call the stored procedure:
+- The arguments to pass the stored procedure for each test run
+- The data that needs to be in the database.
+I want to create a csv for the arguments, and a sql insert script for the database data. Each row in the csv is a test, and is linked to a section of sql in the insert script which inserts the necessary data in the database required for that test. make sure that if a stored procedure has dependencies that these are also included as part of the test coverage
+The database will be purged between test runs.
+The process will have a DDL file describing the database, and the stored procedure to work with.
+I want to use the output as a prompt for an LLM. make the format and process is suitable to be used as a prompt and unambiguous so that an LLM can follow it accurately. 
+
+Given these requirements, create a readme.md with a concise step by step process to follow in order to build these 2 artifacts.
+```
+
+Once you have created the test data, you can use a prompt to create the test harness to execute it against the database.
+```
+Create a c#.net console application that can be configured to run the tests that this prompt will create
+```
+
+With a few small changes by copilot this same console application can be enhanced to execute the same tests against the converted c# code. After which, a file comparison tool can be used to look for differences in the output which would indicate problems with the code migration.  
+
+
 ### QA
 QA teams can use copilot to create test cases, using an MCP server for either GitHub or ADO. Copilot can pull details of the user story including acceptance criteria, and create and link a test case with test steps.
 
@@ -379,6 +404,16 @@ You  should do the following:
 1. Create a test case for testing this new feature
 2. Link the test case to the user story
 3. Add test steps, each with an action and a result, that thoroughly test all aspects of the new functionality.
+```
+
+## Refactor
+
+### Refactor by example
+Using an example refactor for copilot to follow is a great way of getting really good results with minimal prompting.
+```
+Consider the <BLUEPRINT CODE DESCRIPTION> <BLUEPRINT CODE FOLDER> which was refactored to extract common code 
+Refactor the <TARGET CODE DESCRIPTION> <TARGET CODE FOLDER> using a similar approach.
+Only refactor the code, ignore the unit tests at this stage
 ```
 
 ## Migration
